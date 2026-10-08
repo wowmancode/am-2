@@ -91,7 +91,7 @@ jobs:
           echo "Build tools: $BUILD_TOOLS"
 
           export BUILD_TOOLS
-          bash .github/scripts/apk-info.sh source.apk SOURCE_ | tee source-info.env
+          bash .github/scripts/apk-info.sh stock.apk SOURCE_ | tee source-info.env
 
           # shellcheck disable=SC1091
           . ./source-info.env
