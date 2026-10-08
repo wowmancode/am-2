@@ -91,7 +91,7 @@ jobs:
           echo "Build tools: $BUILD_TOOLS"
 
           export BUILD_TOOLS
-          .github/scripts/apk-info.sh source.apk SOURCE_ | tee source-info.env
+          bash .github/scripts/apk-info.sh source.apk SOURCE_ | tee source-info.env
 
           # shellcheck disable=SC1091
           . ./source-info.env
@@ -375,7 +375,7 @@ jobs:
           APK=output/Alight.Motion.Custom.apk
 
           export BUILD_TOOLS
-          .github/scripts/apk-info.sh "$APK" OUTPUT_ | tee output-info.env
+          bash .github/scripts/apk-info.sh "$APK" OUTPUT_ | tee output-info.env
           . ./output-info.env
 
           PACKAGE="$OUTPUT_PACKAGE"
